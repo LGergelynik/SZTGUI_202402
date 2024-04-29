@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Car UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Car Catalog</h1>
+    <div id="formdiv">
+        <label> Car model</label>
+        <input type="text" id="model" />
+        <button type="button" onclick="create()">Add Car</button>
+    </div>
+
+    <div id="updateformdiv">
+        <label> Car model</label>
+        <input type="text" id="modeltoupdate" />
+        <button type="button" onclick="update()">Update Car</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Brand</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+
+    </table>
+
+    <div>
+        <label>Enter Car ID:</label>
+        <input type="text" id="carId" />
+        <button type="button" onclick="countRentalEvents()">Count Rental Events</button>
+        <label>Rental Events Count:</label>
+        <input type="text" id="rentalEventsCount" readonly />
+    </div>
+
+    <div>
+        <button type="button" onclick="getMostPopularBrand()">Get Most Popular Brand</button>
+        <label>Result of Most Popular Brand:</label>
+        <input type="text" id="popularBrandResult" readonly />
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="carScript.js"></script>
+</body>
+</html>

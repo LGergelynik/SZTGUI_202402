@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+
+<body>
+    <h1>Select the subpage you would like to use</h1>
+    <button onclick="redirectToCars()">Go to Cars</button>
+    <button onclick="redirectToBrands()">Go to Brands</button>
+    <button onclick="redirectToRental()">Go to Rentals</button>
+
+    <script>
+        function redirectToCars() {
+            window.location.href = "Car.html";
+        }
+
+        function redirectToBrands() {
+            window.location.href = "Brands.html";
+        }
+
+        function redirectToRental() {
+            window.location.href = "rental.html";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Rental UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Rental Catalog</h1>
+    <div id="formdiv">
+        <label> Rental Date</label>
+        <input type="text" id="rentalDate" />
+        <button type="button" onclick="create()">Add Rental</button>
+    </div>
+
+    <div id="updateformdiv">
+        <label> Car model</label>
+        <input type="text" id="rentaltoupdate" />
+        <button type="button" onclick="update()">Update Rental</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Rental</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+
+    </table>
+    <div>
+        <button type="button" onclick="IsThereAnOngoingRental()">Check if there is an ongoing rental</button>
+        <label>Result of is there an ongoing rental:</label>
+        <input type="text" id="ongoingRentalResult" readonly />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="rentalScript.js"></script>
+</body>
+</html>

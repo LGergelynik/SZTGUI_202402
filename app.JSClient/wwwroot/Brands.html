@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Brand UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Brand Catalog</h1>
+    <div id="formdiv">
+        <label> Brand</label>
+        <input type="text" id="brandName" />
+        <button type="button" onclick="create()">Add brand</button>
+    </div>
+
+    <div id="updateformdiv">
+        <label>Brand name </label>
+        <input type="text" id="brandNametoupdate" />
+        <button type="button" onclick="update()">Update brand</button>
+    </div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Brand</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+
+
+    </table>
+
+    <div>
+        <label>Enter Brand ID:</label>
+        <input type="text" id="brandId" />
+        <button type="button" onclick="CountCarsforBrand()">Count Cars for Brand</button>
+        <label>Result of Count Cars for Brand:</label>
+        <input type="text" id="carForBrandCount" readonly />
+    </div>
+
+    <div>
+        <button type="button" onclick="FindBrandWithMostCars()">Find the brand with the most cars</button>
+        <label>Result of the brand with most cars:</label>
+        <input type="text" id="mostCarsResult" readonly />
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="brandScript.js"></script>
+</body>
+</html>
